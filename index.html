@@ -606,6 +606,26 @@
             color: #b33a3a;
             border-bottom-color: #b33a3a;
         }
+
+        /* 新增提示小字 */
+        .sub-tip {
+            text-align: center;
+            max-width: 700px;
+            margin: 0.5rem auto 2rem;
+            background: rgba(255,250,210,0.5);
+            backdrop-filter: blur(4px);
+            padding: 0.5rem 1.5rem;
+            border-radius: 60px;
+            border: 1px solid white;
+            box-shadow: 0 10px 20px -8px rgba(0,0,0,0.1);
+            font-size: 1rem;
+            color: #2d4a2d;
+            font-weight: 500;
+        }
+        .sub-tip i {
+            margin-right: 0.5rem;
+            color: #f08080;
+        }
     </style>
 </head>
 <body>
@@ -619,7 +639,7 @@
     <!-- 导航栏 -->
     <nav>
         <div class="logo">
-            <img src="./pictures/kk春日头像.jpg" alt="kk头像" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'40\' height=\'40\' viewBox=\'0 0 40 40\'%3E%3Ccircle cx=\'20\' cy=\'20\' r=\'18\' fill=\'%23ffb7c5\'/%3E%3Ctext x=\'10\' y=\'28\' font-size=\'20\' fill=\'%23ffffff\'%3Ekk%3C/text%3E%3C/svg%3E';">
+            <img src="./pictures/kk春日头像.webp" alt="kk头像" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'40\' height=\'40\' viewBox=\'0 0 40 40\'%3E%3Ccircle cx=\'20\' cy=\'20\' r=\'18\' fill=\'%23ffb7c5\'/%3E%3Ctext x=\'10\' y=\'28\' font-size=\'20\' fill=\'%23ffffff\'%3Ekk%3C/text%3E%3C/svg%3E';">
             <span>kk巨献</span>
         </div>
         <div class="nav-links">
@@ -637,9 +657,7 @@
         <br>
             2.网站加载很慢，若要获得更好体验请在PC端打开此网站，并在此网站逗留足够长的时间，尤其是那个立方体要加载很久
         <br>
-            3.移动端云山珠水板块请点击四张卡片的空白处跳转，PC端点击卡片任意处均可跳转。这是bug，我尽量修
-        <br>
-            4.这个网站也会成为我找实习时写在简历上的一个小项目</p>
+            3.这个网站也会成为我找实习时写在简历上的一个小项目</p>
         <button popovertarget="tips-popover" popovertargetaction="hide">收起</button>
     </div>
 
@@ -650,9 +668,7 @@
         <br>
             2.网站加载很慢，若要获得更好体验请在PC端打开此网站，并在此网站逗留足够长的时间，尤其是那个立方体要加载很久
         <br>
-            3.移动端云山珠水板块请点击四张卡片的空白处跳转，PC端点击卡片任意处均可跳转。这是bug，我尽量修
-        <br>
-            4.这个网站也会成为我找实习时写在简历上的一个小项目</p>
+            3.这个网站也会成为我找实习时写在简历上的一个小项目</p>
         <button onclick="document.getElementById('welcome-dialog').close()">收起</button>
     </dialog>
 
@@ -702,6 +718,8 @@
         <!-- 云山珠水 (带轮播图的卡片) -->
         <section class="fade-roll" id="yunshan">
             <h2 class="section-title"><i class="fas fa-water"></i> 云山珠水 <i class="fas fa-water"></i></h2>
+            <!-- 新增提示小字 -->
+            <div class="sub-tip"><i class="fas fa-info-circle"></i> 移动端请点击四张卡片图片文字外的空白处跳转详情页，PC网页端点击卡片任意处均可跳转详情页。这是bug，我尽量修</div>
             <div class="card-grid" id="yunshan-grid">
                 <!-- 卡片1 - 珠江夜韵 轮播 -->
                 <div class="card glass-card carousel-card" data-detail="zjy_detail.html">
@@ -755,7 +773,7 @@
                             </div>
                             <div class="carousel-slide" data-href="shamian_detail.html#pic3">
                                 <div class="image-container">
-                                    <img src="./pictures/沙面3.jpg" loading="lazy" alt="沙面3" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\' viewBox=\'0 0 400 300\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%23ffe5b3\'/%3E%3Ctext x=\'120\' y=\'160\' font-size=\'40\' fill=\'%23ffffff\'%3E☕%3C/text%3E%3C/svg%3E';">
+                                    <img src="./pictures/沙面3.webp" loading="lazy" alt="沙面3" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\' viewBox=\'0 0 400 300\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%23ffe5b3\'/%3E%3Ctext x=\'120\' y=\'160\' font-size=\'40\' fill=\'%23ffffff\'%3E☕%3C/text%3E%3C/svg%3E';">
                                 </div>
                                 <div class="slide-caption">沙面是一个花团锦簇，浪漫典雅的地方，在kk心里这里是广州citywalk的天花板！</div>
                             </div>
@@ -781,13 +799,13 @@
                             </div>
                             <div class="carousel-slide" data-href="hz_detail.html#pic2">
                                 <div class="image-container">
-                                    <img src="./pictures/海珠湖春景2.jpg" loading="lazy" alt="海珠湖春景2" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\' viewBox=\'0 0 400 300\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%23b3e0c9\'/%3E%3Ctext x=\'120\' y=\'160\' font-size=\'40\' fill=\'%23ffffff\'%3E🌸%3C/text%3E%3C/svg%3E';">
+                                    <img src="./pictures/海珠湖春景2.webp" loading="lazy" alt="海珠湖春景2" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\' viewBox=\'0 0 400 300\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%23b3e0c9\'/%3E%3Ctext x=\'120\' y=\'160\' font-size=\'40\' fill=\'%23ffffff\'%3E🌸%3C/text%3E%3C/svg%3E';">
                                 </div>
                                 <div class="slide-caption">每当一批花花期过了，市政府会立刻补种，kk也还没有见过粉色的花海呢</div>
                             </div>
                             <div class="carousel-slide" data-href="hz_detail.html#pic3">
                                 <div class="image-container">
-                                    <img src="./pictures/海珠湖春景3.jpg" loading="lazy" alt="海珠湖春景3" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\' viewBox=\'0 0 400 300\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%23ffe5b3\'/%3E%3Ctext x=\'120\' y=\'160\' font-size=\'40\' fill=\'%23ffffff\'%3E🌿%3C/text%3E%3C/svg%3E';">
+                                    <img src="./pictures/海珠湖春景3.webp" loading="lazy" alt="海珠湖春景3" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\' viewBox=\'0 0 400 300\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%23ffe5b3\'/%3E%3Ctext x=\'120\' y=\'160\' font-size=\'40\' fill=\'%23ffffff\'%3E🌿%3C/text%3E%3C/svg%3E';">
                                 </div>
                                 <div class="slide-caption">海珠湖公园里，花随处可见，开得跟不要钱似的！</div>
                             </div>
@@ -807,7 +825,7 @@
                         <div class="carousel-track">
                             <div class="carousel-slide" data-href="tram_detail.html#pic1">
                                 <div class="image-container">
-                                    <img src="./pictures/有轨电车1.jpg" alt="有轨电车1" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\' viewBox=\'0 0 400 300\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%23f7c5a8\'/%3E%3Ctext x=\'120\' y=\'160\' font-size=\'40\' fill=\'%23ffffff\'%3E🚋%3C/text%3E%3C/svg%3E';">
+                                    <img src="./pictures/有轨电车1.webp" alt="有轨电车1" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\' viewBox=\'0 0 400 300\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%23f7c5a8\'/%3E%3Ctext x=\'120\' y=\'160\' font-size=\'40\' fill=\'%23ffffff\'%3E🚋%3C/text%3E%3C/svg%3E';">
                                 </div>
                                 <div class="slide-caption">广州的有轨电车就像穿行在花的隧道</div>
                             </div>
